@@ -188,7 +188,7 @@ return boundaryEdge;
 
   @Override
   public Iterable<IVertex<V,E,I,J>> getBoundaryVertices() {
-  HashSet <IVertex<V, E, I, J>> boundaryVertices = new HashSet<>();
+  List<IVertex<V, E, I, J>> boundaryVertices = new ArrayList<>();
     for (IVertex<V, E, I, J> localVertex : _localVertexMap.values()) {
       for(IEdge<E, I, J> temp : localVertex.getOutEdges()) {
         if(!_localVertexMap.containsKey(temp.getSinkVertexId())) {
